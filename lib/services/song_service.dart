@@ -4,7 +4,7 @@ import 'package:spotify/models/song_model.dart';
 import 'package:http/http.dart' as http;
 
 class SongService {
-  static const String baseUrl = 'http://localhost:8080/api/songs';
+  static const String baseUrl = 'https://spotify-8vgb.onrender.com/api/songs';
 
   // Helper method để xử lý response
   static dynamic _handleResponse(http.Response response, {bool isCreate = false}) {

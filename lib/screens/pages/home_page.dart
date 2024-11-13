@@ -255,7 +255,7 @@ class _HomePageState extends State<HomePage> {
   Future<void> fetchData() async {
     try {
       final response =
-          await http.get(Uri.parse('http://localhost:8080/api/songs'));
+          await http.get(Uri.parse('https://spotify-8vgb.onrender.com/api/songs'));
 
       if (response.statusCode == 200) {
         final data = json.decode(response.body) as List<dynamic>;
