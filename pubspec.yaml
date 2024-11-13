@@ -1,0 +1,83 @@
+name: spotify
+description: "A new Flutter project with Spotify API integration."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0
+  cached_network_image: ^3.3.0
+  provider: ^6.0.5
+  audio_service: ^0.18.12
+  just_audio: ^0.9.36
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  flutter_svg: ^2.0.7
+  spotify_sdk: ^2.3.1
+  cupertino_icons: ^1.0.8
+  audioplayers: ^6.1.0
+  image_picker: ^1.1.2
+  intl: ^0.19.0
+  file_picker: ^5.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/spo.png
+    - assets/images/mode.png
+    - assets/images/google.png
+    - assets/images/apple.png
+    - assets/images/wait.png
+    - assets/images/home.jpeg
+    - assets/images/home_top_card.png
+    - assets/images/home_artist.png
+
+    - assets/images/songimg/standing_next_to_you.jpg
+    - assets/images/songimg/closer_than_this.jpg
+    - assets/images/songimg/ai_cung_phai_bat_dau_tu_dau_do.jpg
+    - assets/images/songimg/binh_yen.jpg
+    - assets/images/songimg/danh_doi.jpg
+    - assets/images/songimg/die_with_a_smile_lady.jpg
+    - assets/images/songimg/ngan.jpg
+    - assets/images/songimg/who.jpg
+    - assets/images/songimg/i_will_be_there.jpg
+    - assets/images/songimg/3d.jpg
+    - assets/images/songimg/apt.jpg
+
+    - assets/images/albumimg/ai_cung_phai_bat_dau_tu_dau_do.jpg
+    - assets/images/albumimg/bao_tang_cua_tiec_nuoi.jpg
+    - assets/images/albumimg/danh_doi.jpg
+    - assets/images/albumimg/die_with_a_smile_lady.jpg
+    - assets/images/albumimg/flvr.jpg
+    - assets/images/albumimg/golden.jpg
+    - assets/images/albumimg/i_will_be_there.jpg
+    - assets/images/albumimg/muse.jpg
+    - assets/images/albumimg/standing_next_to_you.jpg
+    - assets/images/albumimg/who.jpg
+    - assets/images/albumimg/aptt.jpg
+
+    - assets/audio/standing_next_to_you.mp3
+    - assets/audio/3d.mp3
+    - assets/audio/ai_cung_phai_bat_dau_tu_dau_do.mp3
+    - assets/audio/binh_yen.mp3
+    - assets/audio/danh_doi.mp3
+    - assets/audio/die_with_a_smile.mp3
+    - assets/audio/i_will_be_there.mp3
+    - assets/audio/closer_than_this.mp3
+    - assets/audio/ngan.mp3
+    - assets/audio/who.mp3
+    - assets/audio/apt.mp3
+
+    
