@@ -189,32 +189,32 @@ class ModeSelectionScreen extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(
-                'Choose Mode',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              // Text(
+              //   'Choose Mode',
+              //   style: TextStyle(
+              //     color: Colors.white,
+              //     fontSize: 28,
+              //     fontWeight: FontWeight.bold,
+              //   ),
+              //   textAlign: TextAlign.center,
+              // ),
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _buildModeButton(
-                    icon: Icons.nights_stay,
-                    label: 'Dark Mode',
-                    backgroundColor: Colors.grey[800]!,
-                    iconColor: Colors.white,
-                  ),
+                  // _buildModeButton(
+                  //   icon: Icons.nights_stay,
+                  //   label: 'Dark Mode',
+                  //   backgroundColor: Colors.grey[800]!,
+                  //   iconColor: Colors.white,
+                  // ),
                   SizedBox(width: 20),
-                  _buildModeButton(
-                    icon: Icons.wb_sunny,
-                    label: 'Light Mode',
-                    backgroundColor: Colors.grey[300]!,
-                    iconColor: Colors.black,
-                  ),
+                  // _buildModeButton(
+                  //   icon: Icons.wb_sunny,
+                  //   label: 'Light Mode',
+                  //   backgroundColor: Colors.grey[300]!,
+                  //   iconColor: Colors.black,
+                  // ),
                 ],
               ),
               SizedBox(height: 20),
