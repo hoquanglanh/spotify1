@@ -6,6 +6,7 @@
   import 'package:flutter_secure_storage/flutter_secure_storage.dart';
   import 'package:spotify/screens/pages/favorite_page.dart';
   import 'package:spotify/screens/pages/music_page.dart';
+  import 'package:spotify/screens/pages/search_page.dart';
   import 'package:spotify/screens/pages/profile_page.dart';
   import 'package:http/http.dart' as http;
 
@@ -137,48 +138,66 @@
     }
 
     void _onItemTapped(int index) {
-      if (index == 2) {
-        // Library tab
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => FavoritePage(
-              favoriteSongs: songs
-                  .where((song) => favoriteSongs.contains(song['name']))
-                  .map((song) => FavoriteSong(
-                        name: song['name'],
-                        singer: song['singer'] ?? 'Unknown',
-                        duration: song['duration'] ?? 'Unknown',
-                        isFavorite: true,
-                      ))
-                  .toList(),
-              onPlayPause: playPauseMusic,
-              showLyrics: _showLyrics,
-              toggleFavorite: toggleFavorite,
-              currentPlayingSong: currentPlayingSong,
-              isPlaying: isPlaying,
-              volume: _volume,
-              onVolumeChanged: setVolume,
-              songToImageMap: songToImageMap,
-            ),
-          ),
-        );
-      } else if (index == 3) {
-        // Profile tab
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ProfilePage(
-              email: userEmail ?? 'Unknown User',
-            ),
-          ),
-        );
-      } else {
-        setState(() {
-          _selectedIndex = index;
-        });
-      }
-    }
+  if (index == 1) {
+    // Search tab
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SearchPage(
+          playPauseMusic: playPauseMusic,
+          showLyrics: _showLyrics,
+          toggleFavorite: toggleFavorite,
+          favoriteSongs: favoriteSongs,
+          currentPlayingSong: currentPlayingSong,
+          isPlaying: isPlaying,
+          volume: _volume,
+          onVolumeChanged: setVolume,
+          songToImageMap: songToImageMap,
+        ),
+      ),
+    );
+  } else if (index == 2) {
+    // Library tab
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FavoritePage(
+          favoriteSongs: songs
+              .where((song) => favoriteSongs.contains(song['name']))
+              .map((song) => FavoriteSong(
+                    name: song['name'],
+                    singer: song['singer'] ?? 'Unknown',
+                    duration: song['duration'] ?? 'Unknown',
+                    isFavorite: true,
+                  ))
+              .toList(),
+          onPlayPause: playPauseMusic,
+          showLyrics: _showLyrics,
+          toggleFavorite: toggleFavorite,
+          currentPlayingSong: currentPlayingSong,
+          isPlaying: isPlaying,
+          volume: _volume,
+          onVolumeChanged: setVolume,
+          songToImageMap: songToImageMap,
+        ),
+      ),
+    );
+  } else if (index == 3) {
+    // Profile tab
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ProfilePage(
+          email: userEmail ?? 'Unknown User',
+        ),
+      ),
+    );
+  } else {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+}
 
 
     Future<void> setVolume(double volume) async {
